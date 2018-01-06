@@ -1,25 +1,30 @@
 {
-    "name": "gufy/reseller-club",
+    "name": "nextgi/reseller-club",
     "description": "PHP ResellerClub API bridge",
     "keywords":["reseller-club", "reseller club", "api"],
     "authors": [
         {
             "name": "Mochamad Gufron",
             "email": "mgufronefendi@gmail.com"
+        },
+        {
+            "name": "NextGI",
+            "email": "develop@nextgi.com",
+			"website": "https://www.nextgi.com"
         }
     ],
     "license":"MIT",
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*",
-        "guzzlehttp/guzzle": "~5"
+        "guzzlehttp/guzzle": ">5"
     },
     "autoload": {
         "classmap": [
             "src/migrations"
         ],
         "psr-0": {
-            "Gufy\\ResellerClub\\": "src/"
+            "Nextgi\\ResellerClub\\": "src/"
         }
     },
     "minimum-stability": "stable",
