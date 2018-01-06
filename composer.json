@@ -24,7 +24,7 @@
             "src/migrations"
         ],
         "psr-0": {
-            "Nextgi\\ResellerClub\\": "src/"
+            "Gufy\\ResellerClub\\": "src/"
         }
     },
     "minimum-stability": "stable",
