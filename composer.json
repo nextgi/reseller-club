@@ -4,13 +4,13 @@
     "keywords":["reseller-club", "reseller club", "api"],
     "authors": [
         {
-            "name": "Mochamad Gufron",
-            "email": "mgufronefendi@gmail.com"
-        },
-        {
             "name": "NextGI",
             "email": "develop@nextgi.com",
 			"website": "https://www.nextgi.com"
+        },
+        {
+            "name": "Mochamad Gufron",
+            "email": "mgufronefendi@gmail.com"
         }
     ],
     "license":"MIT",
