@@ -16,8 +16,7 @@ class ResellerClubServiceProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function boot()
-	{
+	public function boot() {
 		$this->package('gufy/reseller-club', 'gufy/rc');
 	}
 
@@ -26,8 +25,7 @@ class ResellerClubServiceProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function register()
-	{
+	public function register() {
 		//
 		$this->app['rc.api'] = $this->app->share(function($app){
 			$config = $app->make('config');
