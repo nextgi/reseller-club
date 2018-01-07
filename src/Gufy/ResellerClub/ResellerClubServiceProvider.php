@@ -26,17 +26,17 @@ class ResellerClubServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		//
-		$this->app['rc.api'] = $this->app->singleton(function($app){
+		
+		$this->app->singleton('rc.api', function($app){
 			$config = $app->make('config');
 			return new ResellerClub($config->get('gufy/rc::auth-userid'), $config->get('gufy/rc::api-key'));
 		});
-	  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-	  $aliases = \Config::get('app.aliases');
+		$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+		$aliases = \Config::get('app.aliases');
 
-	  // Alias the Datatable package
-	  if (empty($aliases['ResellerClub'])) {
-	      $loader->alias('ResellerClub', 'Gufy\ResellerClub\Facades\ResellerClubFacade');
+		// Alias the Datatable package
+		if (empty($aliases['ResellerClub'])) {
+			$loader->alias('ResellerClub', 'Gufy\ResellerClub\Facades\ResellerClubFacade');
 		}
 
 	}
