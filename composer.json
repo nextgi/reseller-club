@@ -28,7 +28,7 @@
     },
     "minimum-stability": "stable",
     "require-dev": {
-        "orchestra/testbench": "~2",
-        "satooshi/php-coveralls": "dev-master"
+        "orchestra/testbench": "3.5.3",
+        "satooshi/php-coveralls": ">1"
     }
 }

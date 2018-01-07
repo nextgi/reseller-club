@@ -17,7 +17,7 @@ class ResellerClubServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-		$this->package('gufy/reseller-club', 'gufy/rc');
+		$this->package('nextgi/reseller-club', 'gufy/rc');
 	}
 
 	/**

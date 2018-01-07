@@ -1,18 +1,17 @@
 <?php
 use Gufy\ResellerClub\ResellerClub;
-class ClassTest extends \Orchestra\Testbench\TestCase
-{
-  public function getPackageProviders()
-  {
-    return [
-      'Gufy\ResellerClub\ResellerClubServiceProvider'
-    ];
+
+class ClassTest extends \Orchestra\Testbench\TestCase {
+	
+  protected function getPackageProviders($app) {
+    return ['Gufy\ResellerClub\ResellerClubServiceProvider'];
   }
+  
   public function testFunctionality()
   {
     $class = new ResellerClub('user-id', 'api-key');
-    $this->assertEquals('user-id', $class->config('auth-userid'));
-    $this->assertEquals('api-key', $class->config('api-key'));
+    $this->assertEquals('user-id', $class->config['params']['auth-userid']);
+    $this->assertEquals('api-key', $class->config['params']['api-key']);
     $class2 = $class->config('hello', 'hai');
     $this->assertEquals($class, $class2);
     $this->assertEquals('hai', $class->config('hello'));
@@ -27,6 +26,7 @@ class ClassTest extends \Orchestra\Testbench\TestCase
     $this->assertEquals('https://httpapi.com/api/domains/search.json', $class->config('url'));
     $this->assertEquals([], $class->config('params'));
   }
+  
   public function testQueryWithParams()
   {
     $class = new ResellerClub('user-id', 'api-key');
