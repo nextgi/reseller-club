@@ -5,7 +5,7 @@ use GuzzleHttp\Client;
 
 class ResellerClub {
     
-    private $config;
+    public $config;
     private $prefix = 'https://httpapi.com/api/';
     
     public function __construct($user_id, $api_key) {
