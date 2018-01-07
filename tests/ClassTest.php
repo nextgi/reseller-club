@@ -24,7 +24,7 @@ class ClassTest extends \Orchestra\Testbench\TestCase {
     $this->assertTrue($class->config('pretend'));
     $data = $class->from('domains/search')->get();
     $this->assertEquals('https://httpapi.com/api/domains/search.json', $class->config('url'));
-    $this->assertEquals([], $class->config('params'));
+    $this->assertEquals(['auth-userid' => 'user-id','api-key' => 'api-key'], $class->config('params'));
   }
   
   public function testQueryWithParams()
@@ -47,6 +47,8 @@ class ClassTest extends \Orchestra\Testbench\TestCase {
       'page-no'=>0,
       'order-by'=>'orderid',
       'status'=>'Active',
+	  'auth-userid' => 'user-id',
+	  'api-key' => 'api-key'
     ], $class->config('params'));
   }
   public function testGetQueryWithParams()
@@ -69,6 +71,8 @@ class ClassTest extends \Orchestra\Testbench\TestCase {
       'page-no'=>0,
       'order-by'=>'orderid',
       'status'=>'Active',
+	  'auth-userid' => 'user-id',
+	  'api-key' => 'api-key'
     ], $class->config('params'));
   }
   public function testPostWithParams()
@@ -91,6 +95,8 @@ class ClassTest extends \Orchestra\Testbench\TestCase {
       'page-no'=>0,
       'order-by'=>'orderid',
       'status'=>'Active',
+	  'auth-userid' => 'user-id',
+	  'api-key' => 'api-key'
     ], $class->config('params'));
   }
   public function testGetRCWithParams()
@@ -113,6 +119,8 @@ class ClassTest extends \Orchestra\Testbench\TestCase {
       'page-no'=>0,
       'order-by'=>'orderid',
       'status'=>'Active',
+	  'auth-userid' => 'user-id',
+	  'api-key' => 'api-key'
     ], $class->config('params'));
   }
   public function testPostUrlWithParams()
@@ -135,6 +143,8 @@ class ClassTest extends \Orchestra\Testbench\TestCase {
       'page-no'=>0,
       'order-by'=>'orderid',
       'status'=>'Active',
+	  'auth-userid' => 'user-id',
+	  'api-key' => 'api-key'
     ], $class->config('params'));
   }
 
