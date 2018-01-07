@@ -27,7 +27,7 @@ class ResellerClubServiceProvider extends ServiceProvider {
 	 */
 	public function register() {
 		//
-		$this->app['rc.api'] = $this->app->share(function($app){
+		$this->app['rc.api'] = $this->app->singleton(function($app){
 			$config = $app->make('config');
 			return new ResellerClub($config->get('gufy/rc::auth-userid'), $config->get('gufy/rc::api-key'));
 		});
